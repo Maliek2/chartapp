@@ -1,6 +1,25 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Scheduling Tasks</title>
+<html amp>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Documentation Of 2022</title>
+
+<link rel="amphtml" href="https://gittyhub.netlify.app/">
+</head>
+<body>
+ <h1>Welcome from Tauri!</h1>
+    <script>
+      // access the pre-bundled global API functions
+      const { invoke } = window.__TAURI__.tauri
+
+      // now we can call our Command!
+      // Right-click the application background and open the developer tools.
+      // You will see "Hello, World!" printed in the console!
+      invoke('greet', { name: 'World' })
+        // `invoke` returns a Promise
+        .then((response) => console.log(response))
+    </script>
 
 <div id='content'></div>
 
@@ -30,3 +49,5 @@
   onload = runExample;
 
 </script>
+</body>
+</html>
